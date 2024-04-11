@@ -30,7 +30,7 @@ class SectionTitle extends StatelessWidget {
               action!,
               style: textTheme.bodyMedium!.copyWith(
                 decoration: TextDecoration.underline,
-                
+                color: colorScheme.secondary,
               ),
             ),
           ),

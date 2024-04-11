@@ -10,7 +10,7 @@ class AppointmentPerviewCard extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.0),
             gradient: LinearGradient(
@@ -26,7 +26,26 @@ class AppointmentPerviewCard extends StatelessWidget {
               SizedBox(height: 100,child: Center(child: Text('No appointment yet', style: textTheme.bodyMedium!.copyWith(color: Colors.white, fontWeight: FontWeight.bold),)),)
             ],
           ),
-        )
+        ),
+        Container(
+          height: 8.0,
+          margin: EdgeInsets.symmetric(horizontal: 12.0),
+          decoration: BoxDecoration(
+            color: colorScheme.primary.withOpacity(0.25),
+            borderRadius: const BorderRadius.vertical(
+              bottom: Radius.circular(8.0)
+            )
+          ),
+        ), 
+        Container(
+          height: 8.0,
+          margin: EdgeInsets.symmetric(horizontal: 24.0),
+          decoration: BoxDecoration(
+            color: colorScheme.primary.withOpacity(0.15),
+            borderRadius: const BorderRadius.vertical(
+              bottom: Radius.circular(8.0)
+            )
+          ),)
       ],
     );
   }

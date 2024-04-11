@@ -30,9 +30,9 @@ class HomeView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Welcome',style: textTheme.bodyMedium,),
-            SizedBox(height: 4.0,),
+             const SizedBox(height: 4.0,),
             Text('Massimo D', style:  textTheme.bodyLarge!.copyWith(fontWeight: FontWeight.bold),),
-            SizedBox(height: 4.0,),
+            const SizedBox(height: 4.0,),
             Row(
               children: [
                   Icon(
@@ -71,7 +71,7 @@ class HomeView extends StatelessWidget {
                           ),
                         ),) ),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         padding: EdgeInsets.all(8.0),
         child: Column(
         children: [
@@ -85,7 +85,7 @@ class HomeView extends StatelessWidget {
 }
 
 class _DoctorCategories extends StatelessWidget {
-  const _DoctorCategories({super.key});
+  const _DoctorCategories();
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +94,9 @@ class _DoctorCategories extends StatelessWidget {
        SectionTitle(
               title: 'Categories',
               action: 'See all',
-              onPressed: () {},
+              onPressed:() {
+                
+              },
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -127,13 +129,13 @@ class _DoctorCategories extends StatelessWidget {
 }
 
 class _MySchedule extends StatelessWidget {
-  const _MySchedule({super.key});
+  const _MySchedule();
 
   @override
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        SectionTitle(title: 'My schedule',action: 'See all' ,onPressed: () {},
+        SectionTitle(title: 'My schedule',action: 'See all' , onPressed: () {},
         ),
         AppointmentPerviewCard()
       ],
